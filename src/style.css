@@ -1,1 +1,11 @@
-/* Acá va tu código */
+body {
+     background-image: url("fondo.jpg");
+     background-size: 300px;
+     text-align: center;
+ }
+ div{
+    margin: 5px;
+ }
+ button{
+    width: 80px; 
+ }
