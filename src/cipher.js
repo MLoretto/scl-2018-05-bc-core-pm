@@ -1,5 +1,5 @@
 window.cipher = {
-  encode: (message, offSet ) => {
+  encode: (message, offSet ) => { 
     let result = "";
     //repite el codigo caracter por caracter del mensaje.
     for(let index=0;index<message.length;index++){
@@ -7,10 +7,10 @@ window.cipher = {
       const code = message.charAt(index).charCodeAt();
       //valida que el rango sea un caracter mayuscula
       if(code > 64 && code < 91){
-        var newCode = code + parseInt(offSet);
+        var newCode = code + parseInt(offSet);//parseInt asegurar que sea número, lo convierto a num(LMS)
         //mientras sea mayor a 90 va restando 26 (cantidad de letras del alfabeto)
         while(newCode > 90){
-          newCode -= 26;
+          newCode -= 26; // El 26 le descuenta un alfabeto completo
         }
       }else{
         //por mientras ~,para ver que hago con caracteres distintos.
