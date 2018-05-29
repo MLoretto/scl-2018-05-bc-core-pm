@@ -21,4 +21,11 @@ function clickCifrar(){
     document.getElementById("getMessage").value = messageDecode;
   
   }
+
+  function clickClear(){
+    //limpio todo
+    document.getElementById("offSetGo").value = "";
+    document.getElementById("showMessage").value = "";
+    document.getElementById("getMessage").value = "";
   
+  }
