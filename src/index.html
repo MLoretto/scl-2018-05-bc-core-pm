@@ -13,19 +13,25 @@
     </div>
     <div>
         <span>Desplazamientos</span><br>
-        <input id="offSetGo" type="number" />
+        <input id="offSetGo" type="number" min="1" />
     </div>
     <div>
         <span>Mensaje a cifrar</span><br>
-        ​<textarea id="getMessage" rows="10" cols="70"></textarea>
-    </div>
-    <div>
-        <span>Descubra su mensaje</span><br>
-        ​<textarea id="showMessage"  rows="10" cols="70"></textarea>
+        ​<textarea id="getMessage" rows="8" cols="70"></textarea>
     </div>
     <div>
       <button id="btnCifrar" onclick="clickCifrar()">CIFRAR</button>
-      <button id="btnDecifrar" onclick="clickDecifrar()">DECIFRAR</button>
+      <button onclick="copyCifrar()">COPIAR</button>
+    </div>
+    <div>
+        <span>Descubra su mensaje</span><br>
+        ​<textarea id="showMessage"  rows="8" cols="70"></textarea>
+    </div>
+    <div>
+        <button id="btnDecifrar" onclick="clickDecifrar()">DECIFRAR</button>
+        <button onclick="copyDesifrar()">COPIAR</button>
+    </div>    
+    <div>
       <button id="btnClear" onclick="clickClear()">LIMPIAR</button>
     </div>
   </div>

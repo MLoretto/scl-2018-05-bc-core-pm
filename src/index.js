@@ -29,3 +29,15 @@ function clickCifrar(){
     document.getElementById("getMessage").value = "";
   
   }
+
+  function copyCifrar(){
+    let encodeText =  document.getElementById("getMessage");
+    encodeText.select();
+    document.execCommand("copy");
+  }
+
+  function copyDesifrar(){
+    let encodeText =  document.getElementById("showMessage");
+    encodeText.select();
+    document.execCommand("copy");
+  }
