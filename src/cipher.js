@@ -1,5 +1,6 @@
+/*
 window.cipher = {
-  encode: (message, offSet ) => { 
+  encode: (message, offSet ) => {
     let result = "";
     //repite el codigo caracter por caracter del mensaje.
     for(let index=0;index<message.length;index++){
@@ -60,3 +61,72 @@ window.cipher = {
     return result;	
   }
 }
+*/
+window.cipher = {
+  encode: (message, offSet) => { 
+     //se declara un string con el alfabeto deseado
+     const alphabet = "ABCDEFGHIJKLMNÑOPQRSTUVWXYZ abcdefghijklmnñopqrstuvwxyz1234567890áéíóú.,";
+     let result = "";
+	 //se recorre letra a letra el mensaje
+     for(let i=0;i<message.length;i++){
+	   //se obtiene la letra, y se busca e el alfabeto y se obtiene el indice 
+       const index = alphabet.indexOf(message.charAt(i), 0);
+	   //si encuentra la letra 
+       if(index != -1){
+		 //suma al indice obtenido el desplazamiento (offset)
+         let newIndex  = index + parseInt(offSet);
+		 //si el indice nuevo es mayor al largo del alfabeto 
+         if(newIndex > alphabet.length)
+         {
+		   //obtiene el factor representativo del largo total del desplazamiento en el alfabeto.
+           let factor = newIndex / alphabet.length;
+		   //multiplica el fator por el largo del alfabeto y obtiene un indice que este entre los limites del alfabeto
+           newIndex -= parseInt(factor) * alphabet.length;
+         }
+		 //concatena la letra obtenida al resultado.
+         result += alphabet[newIndex];
+       }else{
+		//sino encuentra la letra concatena ~   
+        result += "~";
+       }
+     }
+	 //retorna el resultado obtenido
+     return result;	
+   },
+   decode: (criptoMessage,offSet) => {
+	 //se declara un string con el alfabeto deseado
+     const alphabet = "ABCDEFGHIJKLMNÑOPQRSTUVWXYZ abcdefghijklmnñopqrstuvwxyz1234567890áéíóú.,";
+     let result = "";
+	  //se recorre letra a letra el mensaje
+     for(let i=0;i<criptoMessage.length;i++){
+	   //se obtiene la letra, y se busca e el alfabeto y se obtiene el indice 
+       const index = alphabet.indexOf(criptoMessage.charAt(i), 0);
+       //si no encuentra la letra 
+	   if(index == -1){
+		  //concatena la letra ~ 
+          result += "~";
+       }else{
+		 //resta al indice obtenido el desplazamiento (offset)
+         let newIndex  = index - parseInt(offSet);
+		 //si el nuevo indice es menor que cero
+         if(newIndex < 0)
+         {
+		   //reinicia el nuevo indice a 0	 
+           newIndex = 0;
+		   //determina el desface que existe entre el principio del alfabeto y el indice obtenido
+           let desface = (parseInt(offSet) - index)
+		   //obtiene la cantidad de alfabetos que existen entre el desface y el offset
+           let bloques = parseInt(desface / alphabet.length);
+           //resta los bloques al desface y obtiene un rango valido entre los limites del alfabeto
+		   let resto = desface - (bloques * alphabet.length);
+		   //como nos estamos devolviendo obtiene el largo del alfabeto y resta el resto obtenido anteriormente.
+           newIndex = alphabet.length - resto;
+         }
+		 //concatena al resultado la letra obtenida
+         result += alphabet[newIndex];
+       }
+     }
+	 //retorna la palabra obtenida
+     return result;	
+   }
+ }

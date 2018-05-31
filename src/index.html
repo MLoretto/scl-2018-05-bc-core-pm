@@ -2,8 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Cifrado Cesar</title>
+  <title>CIFRADO CESAR</title>
   <link rel="stylesheet" href="style.css" />
+  
 </head>
 <body>
 
@@ -13,22 +14,25 @@
     </div>
     <div>
         <span>Desplazamientos</span><br>
-        <input id="offSetGo" type="number" min="1" />
+        <input id="offSetGo" type="number" min="1" /><br>
+        <span  id="msgErrorOffSet" class="messageError">Tiene que ingresar un número</span>
     </div>
     <div>
-        <span>Mensaje a cifrar</span><br>
-        ​<textarea id="getMessage" rows="8" cols="70"></textarea>
+        <span>Mensaje a Cifrar</span><br>
+        ​<textarea id="getMessage" rows="7" cols="70"></textarea><br>
+        <span id="msgErrorCifrar" class="messageError">Tiene que ingresar un mensaje a Cifrar</span>
     </div>
     <div>
       <button id="btnCifrar" onclick="clickCifrar()">CIFRAR</button>
       <button onclick="copyCifrar()">COPIAR</button>
     </div>
     <div>
-        <span>Descubra su mensaje</span><br>
-        ​<textarea id="showMessage"  rows="8" cols="70"></textarea>
+        <span>Mensaje a Descifrar</span><br>
+        ​<textarea id="showMessage"  rows="7" cols="70"></textarea><br>
+        <span  id="msgErrorDecifrar" class="messageError">Tiene que ingresar un mensaje a Descifrar</span>
     </div>
     <div>
-        <button id="btnDecifrar" onclick="clickDecifrar()">DECIFRAR</button>
+        <button id="btnDecifrar" onclick="clickDecifrar()">DESCIFRAR</button>
         <button onclick="copyDesifrar()">COPIAR</button>
     </div>    
     <div>
