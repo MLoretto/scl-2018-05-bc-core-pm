@@ -87,6 +87,12 @@ button{
    width:80px;
    height:19px;
    border-radius: 10px;
+   transition: 0.3s;
+
+}
+
+button:hover{
+    background-color: #ffb04c;
 }
 
 input{
