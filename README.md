@@ -38,74 +38,34 @@ sistema ROT13.
 
 ## Organización de Trabajo a Desarrollar
 
-1 Crear Ambiente de Desarrollo
-  Editor de Texto = Visual Studio Code
-  Node
-  GIT
-  MOCHA
-  Trello (https://trello.com/b/4cawPYas/proyecto-cifrado-cesar)
-  GitHub
-
-2 UX
-  Desarrollo de Encuasta
-
-
-
-
-## Consideraciones generales
-
-Deben comenzar a familiarizarse con ES6 por lo cual tendrán que hacer uso de 
-`const`, `let` y `arrow function`.
-En este proyecto NO está permitido usar librerías o frameworks, sólo
-[vanilla JavaScript](https://medium.com/laboratoria-how-to/vanillajs-vs-jquery-31e623bbd46e).
-
-## Parte obligatoria
+La Organización puede ser revisada en este link (https://trello.com/b/4cawPYas/proyecto-cifrado-cesar)
+Como adicional se adjuntan imagenes al final del Documento, donde se muestra desarrollo inicial, que fueron consideradas en la toma de decisiones.
 
 ### UI
 
 La interfaz debe permitir al usuario:
 
-* elegir un `offset` indicando cuántas posiciones queremos que el cifrado
-  desplace cada caracter
-* insertar un mensaje (texto) que queremos cifrar
-* ver el resultado del mensaje cifrado
-* insertar un mensaje (texto) a descifrar
-* ver el resultado del mensaje descifrado
-* hacer uso de `const`, `let` y `arrow function`
-
-### Scripts / Archivos
-
-* `README.md`: debe explicar cómo descargar, instalar y ejecutar la aplicación
-  así como una introducción a la aplicación, su funcionalidad y decisiones de
-  diseño que tomaron.
-* `src/index.html`: este es el punto de entrada a tu aplicación. Este archivo
-  debe contener to _markup_ (HTML) e incluir el CSS y JavaScript necesario.
-* `src/cipher.js`: acá debes implementar dos funciones:
-    - `cipher.encode(offset, string)`: `offset` es el número de posiciones que
-       queremos mover a la derecha en el alfabeto y `string` el mensaje (texto)
-       que queremos cifrar.
-    - `cipher.decode(offset, string)`: `offset` es el número de posiciones que
-      queremos mover a la izquierda del alfabeto y `string` el mensaje (texto) 
-      que queremos descifrar.
-* `src/index.js`: acá debes escuchar eventos del DOM, invocar `cipher.encode()`
-  o `cipher.decode()` según sea necesario y actualizar el resultado en la UI.
-* `test/cipher.spec.js`: este archivo contiene los tests que deberás correr
-  para ver que todo funcione correctamente.
+* Elegir un `offset` indicando cuántas posiciones queremos que el cifrado desplace cada caracter.
+* Insertar un mensaje (texto) que queremos cifrar.
+* Ver el resultado del mensaje cifrado.
+* Insertar un mensaje (texto) a descifrar.
+* Ver el resultado del mensaje descifrado.
+* Alerta a usuario si los campos estan vacíos ya sea en Desplazamiento, y áreas de texto.
+* Limpia los campos para comenzar nuevamente.
+* Copiar mensaje de Cifrar o Decifrar.
+* Si usuario tiene dudas, existe botón de ayuda con explicación.
 
 ## Hacker edition
 
 No estás limitada a implementar solo la parte obligatoria. 
 Te sugerimos algunas cosas:
 * Se realizan 2 test adicionales siguiendo el formato dado.
-* El programa sea capaz de cifrar minúsculas.
+* El programa es capaz de cifrar minúsculas.
 
 
 ## Entrega
 
-El proyecto será _entregado_ subiendo tu código a GitHub (`commit`/`push`) y la
-interfaz será desplegada usando GitHub pages.
-
-
+El proyecto es entregado el 01-06-2018
 
 
 

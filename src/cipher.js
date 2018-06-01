@@ -50,7 +50,7 @@ window.cipher = {
   }
 }
 
-/* ESTA OPCION NO PASO LOS TEST :(
+/* ESTA OPCION NO PASO LOS TEST, pero es 100% Funcional :( 
 window.cipher = {
   encode: (message, offSet) => { 
      const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";// abcdefghijklmnñopqrstuvwxyz1234567890áéíóú.,";
