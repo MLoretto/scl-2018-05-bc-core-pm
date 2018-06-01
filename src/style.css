@@ -1,7 +1,6 @@
 body{
     margin: 0;
-    background-image: url("Fondo1.jpg");
-    background-size: 300px;
+    background-color: black;
     text-align: center;
     color: white;
 }
