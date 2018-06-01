@@ -1,41 +1,104 @@
 body{
+    margin: 0;
     background-image: url("Fondo1.jpg");
     background-size: 300px;
     text-align: center;
     color: white;
 }
 
+.imgHelp{ /*Imagen que se ocupa en botón ayuda.*/
+    width: 32px;
+    height: 28px;  
+}
+
+#btnHelpMe{ /*Botón de ayuda (Icono)*/
+    position: absolute;
+    left:10px;
+    top:6px;
+    cursor:pointer;
+}
+
+#ejemplo{ /*Imagen ejemplo de deplazamiento en ayuda*/
+    width:250px;
+    height:100px;
+}
+
+#helpIcono{ /*Icono ayuda*/
+    background-size: 32px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+#helpContent{ /*Contenedor de ayuda*/
+    width: 250px;
+    height:90vh;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    background:#000051;
+    padding: 10px;
+    color:white;
+    border-radius: 10px;
+    opacity:0.9;
+    display: none;
+}
+
+p{
+    font-size: 12px;
+}
+header {
+    background: #000051;
+    margin-top: 0px;
+    padding: 2px;
+    opacity: 0.7;
+    height: 50px;
+}
+
+footer{
+    background: #000051;
+    opacity: 0.7;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
 h1{
     text-align: center;
     color: white;
+    margin-top: 4px;
+}
+
+h3{
+    margin-top: 5px;
+    margin-left: 25px;
 }
 
 div{
-   margin: 5px;
+   margin: 8px;
 }
+
 button{
-   
    font-size:10px;
    font-family:Verdana,Helvetica;
    font-weight:bold;
    color:white;
-   background:#638cb5;
+   background:#1976d2;
    border:0px;
    width:80px;
    height:19px;
    border-radius: 10px;
-   
 }
+
+input{
+    border-radius: 10px;
+ }
 
 textarea{
    border-radius: 10px; 
 }
 
-input{
-   border-radius: 10px;
-}
-
 .messageError{
-   color:#f57c00;
+   color:#ffb04c;
    display: none;
 }

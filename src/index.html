@@ -7,14 +7,35 @@
   
 </head>
 <body>
+  <header>
+    <h1>CIFRADO CESAR</h1>
+  </header>
+
+  <div id="btnHelpMe"><img class="imgHelp" onclick="openHelp()" src="helpicon.png"></div>
+  
+  <div id="helpContent">
+      <div id="helpIcono">
+        <img class="imgHelp" src="helpicon.png"/><br>
+      </div>
+      <h3>¿Cómo utilizar el Cifrado?</h3>
+      <p> El Cifrado César es uno de los primeros métodos de cifrado conocidos históricamente. 
+        Es un tipo de cifrado por sustitución en el que una letra en el texto original es reemplazada 
+        por otra letra que se encuentra un número fijo de posiciones más adelante en el alfabeto.</p>
+      <img id = "ejemplo" src="ejemplo.png"/>
+      <p>Por ejemplo si usáramos un desplazamiento de 3:</p>
+      <p>Alfabeto sin cifrar:</p>
+      <p>A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</p>
+      <p>Alfabeto cifrado:</p>
+      <p>D E F G H I J K L M N O P Q R S T U V W X Y Z A B C</p>
+      <p>Si el mensaje es: Hola</p>
+      <p>El mensaje codificado será: <strong>Krod</strong></p>
+      <button id="btnHelp" onclick="closeHelp()">CERRAR</button>
+    </div>
 
   <div id="root">
     <div>
-        <h1>CIFRADO CESAR</h1>
-    </div>
-    <div>
         <span>Desplazamientos</span><br>
-        <input id="offSetGo" type="number" min="1" /><br>
+        <input id="offSetGo" type="number" min="1" max="1000000000" /><br>
         <span  id="msgErrorOffSet" class="messageError">Tiene que ingresar un número</span>
     </div>
     <div>
@@ -39,7 +60,7 @@
       <button id="btnClear" onclick="clickClear()">LIMPIAR</button>
     </div>
   </div>
-
+  <footer>&#174; MLoretto</footer>
   <script src="cipher.js"></script>
   <script src="index.js"></script>
 </body>
